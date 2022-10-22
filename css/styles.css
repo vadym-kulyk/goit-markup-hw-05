@@ -2,6 +2,7 @@
   --primary-text-color: #212121;
   --accent-color: #2196f3;
   --second-color: #757575;
+  --color-icon: #AFB1B8;
   --bg-color-main: #f5f5f5;
   --bg-color-second: #ffffff;
   --bg-for-button: #f5f4fa;
@@ -290,6 +291,8 @@ button {
   height: 100%;
   border-radius: 50%;
   fill: #AFB1B8;
+  transition: fill 250ms var(--timing-function), color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+
 }
 .social-list-icon {
 width: 20px;
@@ -307,6 +310,7 @@ height: 20px;
 .social-list-link:hover,
 .social-list-link:focus {
   background-color:  var(--accent-color);
+  color: var(--bg-color-main);
 }
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon {
@@ -338,6 +342,8 @@ height: 20px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   color: #AFB1B8;
+  transition: border-color 250ms var(--timing-function), fill 250ms var(--timing-function), color 250ms var(--timing-function), background-color 250ms var(--timing-function);
+
 }
 
 
@@ -505,7 +511,10 @@ height: 20px;
   border: 0px;
   min-width: 73px;
   padding: 6px 22px;
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
+
+
 
 .buttons-list-item:hover,
 .buttons-list-item:focus,
@@ -547,6 +556,8 @@ height: 20px;
 .portfolio-card-link {
   display: block;
   text-decoration: none;
+  transition: box-shadow 250ms var(--timing-function);
+
 }
 
 .portfolio-card-link:hover,
@@ -578,8 +589,8 @@ height: 20px;
 
 }
 
-.portfolio-overlay:hover .overlay,
-.portfolio-overlay:focus .overlay {
+.portfolio-card-link:hover .overlay,
+.portfolio-card-link:focus .overlay {
   transform: translateY(0%);
   opacity: 1;
 }
@@ -697,6 +708,8 @@ height: 20px;
   border-radius: 50%;
   fill: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--timing-function);
+  
 }
 
 .footer-social-list-link:hover,
@@ -797,11 +810,13 @@ text-transform: uppercase;
   align-items: center;
 }
 
+
 .close {
   fill: #000000;
   width: 18px;
   height: 18px;
 }
+
 
 .is-hidden {
   opacity: 0;
