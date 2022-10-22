@@ -7,6 +7,7 @@
   --bg-for-button: #f5f4fa;
   --bg-for-footer: #2f303a;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --main-font: "Roboto", sans-serif;
 }
 
 h1,
@@ -132,6 +133,8 @@ button {
   padding: 32px 0px;
   display: flex;
     align-items: center;
+    transition: color 250ms var(--timing-function);
+    
 }
 .phone:hover,
 .phone:focus
@@ -385,6 +388,7 @@ height: 20px;
   padding-top: 32;
   padding-bottom: 32;
   align-items: center;
+  
 }
 
 .contacts {
@@ -402,6 +406,35 @@ height: 20px;
   display: flex;
   column-gap: 30px;
 }
+
+.ourservice-item {
+  position: relative;
+}
+
+
+.service-description {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.143;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  height: 70px;
+  color: var(--title-secondary-color);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(47, 48, 58, 0.8);
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+
 /* ставимо на а */
 .navigation-link {
   color: var(--primary-text-color);
@@ -411,6 +444,8 @@ height: 20px;
   letter-spacing: 0.02em;
   text-decoration: none;
   padding: 32px 0px;
+  transition: color 250ms var(--timing-function);
+  position: relative;
 }
 
 .navigation-link:hover,
@@ -424,6 +459,21 @@ height: 20px;
 .current {
   color: var(--accent-color);
 }
+
+
+.navigation-link.current::after {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: rgba(33, 150, 243, 1);
+  border-radius: 2px;
+}
+
+
 /* додав стиль пря проєктів, щоб потім не  шукати
 .projects {
   background: var(--bg-color-second);
@@ -503,6 +553,41 @@ height: 20px;
 .portfolio-card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+.portfolio-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.overlay {
+  position: absolute;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  transition: transform 250ms linear;
+  transform: translateY(100%);
+
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 1.56;
+
+}
+
+.portfolio-overlay:hover .overlay,
+.portfolio-overlay:focus .overlay {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+
+
+
+
 .projects-title {
   font-weight: 700;
   font-size: 18px;
@@ -675,7 +760,7 @@ text-transform: uppercase;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: all 500ms linear;
+  transition: all 250ms linear;
 }
 
 .modal-window {
@@ -685,10 +770,10 @@ text-transform: uppercase;
   transform: translate(-50%, -50%);
   width: 528px;
   min-height: 581px;
-  background: var(--title-secondary-color);
+  background: var(--bg-color-main);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform 500ms linear;
+  transition: transform 250ms linear;
 }
 
 .backdrop .is-hidden .modal-window {
@@ -703,7 +788,7 @@ text-transform: uppercase;
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--title-secondary-color);
+  background-color: var(--bg-color-main);
   box-sizing: border-box;
   border-radius: 50%;
   cursor: pointer;
