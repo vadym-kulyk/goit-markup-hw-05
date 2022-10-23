@@ -134,7 +134,7 @@ button {
   padding: 32px 0px;
   display: flex;
     align-items: center;
-    transition: color 250ms var(--timing-function);
+    transition: color 250ms var(--timing-function), fill 250ms var(--timing-function);
     
 }
 .phone:hover,
@@ -157,6 +157,7 @@ button {
 .address-icon {
   margin-right: 10px;
   fill: #757575;
+  transition: fill 250ms var(--timing-function);
 }
 
 
@@ -297,6 +298,7 @@ button {
 .social-list-icon {
 width: 20px;
 height: 20px;
+transition: fill 250ms var(--timing-function);
 }
 
 
@@ -364,7 +366,7 @@ height: 20px;
   width: 106px;
   height: 60px;
   fill: #AFB1B8;
-  
+  transition:  fill 250ms var(--timing-function);
 }
 
 
@@ -511,7 +513,7 @@ height: 20px;
   border: 0px;
   min-width: 73px;
   padding: 6px 22px;
-  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), filter 250ms var(--timing-function);
 }
 
 
@@ -633,6 +635,7 @@ height: 20px;
   text-align: center;
   letter-spacing: 0.03em;
   cursor: pointer;
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 .button:hover,
