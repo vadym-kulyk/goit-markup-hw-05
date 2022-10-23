@@ -808,7 +808,7 @@ text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 
 /*.close-btn:hover {
@@ -823,7 +823,8 @@ text-transform: uppercase;
   transition: fill 250ms var(--timing-function);
 }
 
-.close-btn:hover  .close {
+.close-btn:hover .close,
+.close-btn:focus .close {
   fill: var(--accent-color)
   
 }
