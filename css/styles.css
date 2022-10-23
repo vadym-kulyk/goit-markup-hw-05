@@ -811,10 +811,10 @@ text-transform: uppercase;
   transition: background-color 250ms var(--timing-function);
 }
 
-.close-btn:hover {
+/*.close-btn:hover {
   background-color: #2196f3;
   
-}
+}*/
 
 .close {
   fill: #000000;
@@ -824,7 +824,7 @@ text-transform: uppercase;
 }
 
 .close-btn:hover  .close {
-  fill: var(--bg-color-main)
+  fill: var(--accent-color)
   
 }
 
